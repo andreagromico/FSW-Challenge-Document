@@ -1,0 +1,293 @@
+.container-fluid {
+    background-color: #9C835F;
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper {
+    height: fit-content;
+    width: 100%;
+    padding: 10px;
+    background-color: #9C835F;
+    margin: 10px 0;
+}
+
+.wrapper1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    height: 50px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.header {
+    color: #F9B23D;
+}
+
+.wrapper2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+
+    height: 50rem;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    width: 12rem;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.box1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    height: fit-content;
+    width: fit-content;
+    height: 7rem;
+    width: 7rem;
+    border-radius: 30px;
+    color: #e0d9d9;
+    margin: 10px;
+
+}
+
+.pilihan {
+    height: 6rem;
+    width: 6rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    align-content: center;
+    margin: 10px;
+}
+
+.box-header {
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    width: fit-content;
+    background-color: #9C835F;
+    margin-bottom: 4rem;
+}
+
+.container-play {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: fit-content;
+    justify-content:center;
+    align-items: center;
+    margin-left: 19rem;
+}
+
+.versus {
+    display: flex;
+    flex-direction: column;
+    height: 30rem;
+    width: 30rem;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.middle-versus {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.computer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+    width: fit-content;
+    align-items: center;
+    margin-right: 17rem;
+    
+}
+
+.container-refresh {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.refresh {
+    height: fit-content;
+    width: fit-content;
+    justify-content: center;
+}
+
+.reload.button {
+    height: 2rem;
+    width: 2rem;
+    justify-content: center;
+}
+
+
+/*Gameplay*/
+
+#reference-reload{
+  border-radius: 0%;
+  max-width:6rem;
+  height: 6rem;
+  align-content: center;
+  background-color: transparent;
+}
+
+.vs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  width: fit-content;
+  background-color: #9C835F;
+  font-size: medium;
+  font-weight: bold
+
+}
+
+.DRAW {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 9.5rem;
+  border-radius: 10%;
+  background-color: #e4e011;
+  font-size: medium;
+  font-weight: bold;
+
+}
+
+.PlayerWin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 9.5rem;
+  border-radius: 10%;
+  background-color: #5eeb75;
+  font-size: medium;
+  font-weight: bold;
+  rotate: 45;
+  
+}
+
+.ComputerWin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 9.5rem;
+  border-radius: 10%;
+  background-color: #f05555; 
+  font-size: medium;
+  font-weight: bold;
+  
+}
+
+
+/*Responsive*/
+@media only screen and (max-width: 600px) {
+
+    .container-play {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 0%;
+        margin-bottom: 0%;
+    }
+
+    .wrapper2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .player {
+        display: flex;
+        flex-direction: row;
+        height: fit-content;
+        justify-content: center;
+        width: fit fit-content;
+        margin-left: 0%;
+        padding-bottom: 1rem;
+    }
+
+    .computer {
+        display: flex;
+        flex-direction: row;
+        height: fit-content;
+        justify-content: center;
+        width: fit-content;
+        margin-right: 0%;
+        padding-bottom: 1rem;
+        
+    }
+    
+    .box1 {
+        display: flex;
+        flex-direction: row;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .box {
+        display: flex;
+        flex-direction: row;
+        height: 5rem;
+        width: 12rem;
+        
+    }
+
+    .pilihan {
+        height: 4rem;
+        width: 4rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        align-content: center;
+        margin: 10px;
+    }
+
+    .versus {
+        display: flex;
+        flex-direction: column;
+        height: 7rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #reference-reload{
+        border-radius: 0%;
+        max-width:4rem;
+        height: 4rem;
+        align-content: center;
+        background-color: transparent;
+      }
+}
