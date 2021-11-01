@@ -1,0 +1,92 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Traditional Game</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.js"></script> 
+    <script src="assets/js/popper.js"></script> 
+    <script src="https://kit.fontawesome.com/484cc8aa05.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section class = "page3-features d-flex align-items-center" id = "home"> 
+
+            <!--Navigation Bar Section-->
+            <div class="row" id="navbar-big">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-nav-project fixed-top">
+                    <div class="container-fluid">
+                        <a class="navbar-brand font-h3" href="#">LOGO</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse font-subtext" id="navbarText">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                    <a class="nav-link active" href="/">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                    <a class="nav-link" href="#">WORK</a>
+                            </li>
+                            <li class="nav-item">
+                                    <a class="nav-link" href="#footer">CONTACT</a>
+                            </li>
+                            <li class="nav-item">
+                                    <a class="nav-link" href="#">ABOUT ME</a>
+                            </li>
+                            </ul>
+                            <ul class="navbar-nav d-flex">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/register">SIGN UP</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/login">LOGIN</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col offset-lg-7">
+                        <div class="login">
+                            <form method="POST" action="/login" >
+                                
+                                <div class="form-outline mb-4">
+                                    <input name="email" type="email" id="form3Example3" class="form-control form-control-sm"
+                                    placeholder="Enter a valid email address" />
+                                </div>
+                        
+                                
+                                <div class="form-outline mb-3">
+                                    <input name="password" type="password" id="form3Example4" class="form-control form-control-sm"
+                                    placeholder="Enter password" />
+                                </div>
+                        
+                                <div class="d-flex justify-content-between align-items-center">
+        
+                                    <div class="form-check mb-0">
+                                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                                    <label class="form-check-label" for="form2Example3">Remember me</label>
+                                    <a data-bs-toggle="modal" data-bs-target="#exampleModal1" class="text-body">Forgot password?</a>
+                                    </div>
+                                    
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-primary">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+
+    </section>
+</body>
+</html>
