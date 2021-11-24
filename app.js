@@ -3,6 +3,10 @@ const express= require('express');
 const app = express();
 const port = 3000;
 
+// import model database
+const { User } = require('./models')
+const { Profile } = require('./models');
+
 // set view engine menggunakan ejs
 app.set('view engine', 'ejs')
 
@@ -21,25 +25,105 @@ const router = require('./router')
 app.use(router)
 
 //define users
-var user = [
+var users = [
     {
-        email: 'user@mail.com',
+        username: 'player',
         password: 'abc123'
     }
 ]
 
 //login procedure
 app.post('/login', (req, res) => {
-    const {email, password} = req.body
-    let userEmail = user.find(user => user.email === email)
-    let userPassword = user.find(user => user.password === password)
-    console.log(userEmail)
-    if (userEmail) {
-        res.json(userEmail)
+    const {username, password} = req.body
+    let Player = users.find(user => user.username === username)
+    let Password = users.find(user => user.password === password)
+    console.log(Player)
+    if (Player) {
+        res.redirect('/dashboard')
     }
     else {
         res.json("Incorrect Login")
     }
+})
+
+
+app.get('/dashboard', (req, res) => {
+    User.findAll()
+    .then(users => {
+    res.render('dashboard', {
+    users
+    })
+    })
+})
+
+
+
+//create
+app.post('/create', (req, res) => {
+    User.create({
+    username: req.body.username,
+    password: req.body.password,
+    role: req.body.role
+    })
+
+    .then(user => {
+        res.redirect('/dashboard')
+    })
+   
+})
+
+
+
+
+
+//update
+app.post('/update/:id', (req, res) => {
+    User.update({
+    username: req.body.username,
+    password: req.body.password,
+    role: req.body.role
+    }, {
+    where: { id: req.params.id }
+    })
+    .then(user => {
+        res.render('edit', {
+            user
+        })
+    })
+})
+
+//delete
+app.get('/delete/:id', (req, res) => {
+    User.destroy({
+        where: { id: req.params.id }
+        })
+        .then(user => {
+            res.redirect('/dashboard')
+        })
+})
+
+
+// pick and select one
+app.get('/update/:id', (req, res) => {
+    User.findOne({
+    where: { id: req.params.id }
+    })
+    .then(user => {
+    
+    res.redirect('/dashboard')
+    })
+})
+
+app.get('/edit/:id', (req, res) => {
+    User.findOne({
+    where: { id: req.params.id }
+    })
+    .then(user => {
+    // res.status(200).json(user)
+    res.render('/edit', {
+        user
+        })
+    })
 })
 
 //errorHandler
@@ -57,6 +141,9 @@ app.use((req, res, next) => {
     })
     next()
 })
+
+
+
 
 
 //webserver
