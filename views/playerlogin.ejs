@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <%- include("./partials/head.ejs"); %>
+</head>
+<body>
+    <div class="container-fluid" id="CallToAction">
+        <div class="page1-main-screen">                
+            <%- include("./partials/navbar.ejs") %>
+            
+            <div class="container-game">
+                <div class="login">
+                    <div class="form-outline mb-4">
+                        <p>Choose Playing Mode</p>
+
+                        <a href="/single" class="btn btn-primary">Single Player</a>
+                        <a href="/versus" class="btn btn-warning">Multiplayer</a>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+</body>
+</html>

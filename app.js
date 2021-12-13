@@ -5,9 +5,6 @@ const port = 3000;
 const flash = require('express-flash')
 const session = require("express-session");
 
-// import model database
-const { sequelize, User, Profile, Historical } = require('./models')
-
 //middleware
 const logger = (req, rest, next) => {
     console.log(`${req.method} ${req.url}`)
@@ -35,7 +32,7 @@ app.set('view engine', 'ejs')
 const router = require('./router')
 //const apiRouter = require('./api/router')
 app.use(router)
-app.use(apiRouter)
+//app.use(apiRouter)
 
 //define users
 var users = [
@@ -44,6 +41,7 @@ var users = [
         password: 'abc123'
     }
 ]
+
 
 //webserver
 app.listen(port, ()=>{

@@ -1,8 +1,8 @@
 const { User, Profile, Historical} = require('../models')
 
 module.exports = {
-    index: (req, res) => {
-        console.log(User);
+    home: (req, res) => {
+        res.render('index');
     },
 
     vCreate: (req,res) =>{
@@ -30,7 +30,7 @@ module.exports = {
     edit: (req, res) => {
         User.findOne({where: {id: req.params.id}})
         .then(article => {
-            res.render('edit', {user})
+            res.render('edit', {User})
         })
     }, 
 
@@ -57,6 +57,38 @@ module.exports = {
             res.redirect('/dashboard')
         })
     },
+
+    register :(req, res) => {
+        res.render('register')
+    },
+
+    login : (req,res) =>{
+        res.render('login')
+    },
+    game :(req, res) => {
+        res.render('game')
+    },
+
+    game2 :(req, res) => {
+        res.render('game2')
+    },
+
+    playerlogin :(req, res) => {
+        res.render('playerlogin')
+    },
+
+    single :(req,res)=>{
+        res.redirect('/game')
+    },
+
+    versus :(req,res)=>{
+        res.redirect('/game2')
+    },
+
+    logout :(req, res) => {
+        res.render('index')
+    },
+
     
     historicalFindAll: (req, res) => {
         Historical.findAll()

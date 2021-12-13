@@ -10,6 +10,7 @@ function format(user) {
     }
 }
 
+
 module.exports = {
     register: (req, res, next) => {
         User.register(req.body)
@@ -20,10 +21,19 @@ module.exports = {
     },
 
     login: passport.authenticate('local', {
-        successRedirect: '/game',
+        successRedirect: '/playerlogin',
         failureRedirect: '/login',
         failureFlash: true
     }),
+
+
+    game: (req, res) => {
+        res.render('game', req.user.dataValues)
+    },
+    
+    game2: (req, res) => {
+        res.render('game2', req.user.dataValues)
+    },
 
     apiLogin: (req, res) => {
         User.authenticate(req.body)
@@ -32,9 +42,6 @@ module.exports = {
                     format(user)
                 )
             })
-    },
-    game: (req, res) => {
-        res.render('game', req.user.dataValues)
     },
     apigame: (req, res) => {
         const currentUser = req.user

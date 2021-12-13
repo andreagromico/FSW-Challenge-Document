@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const {page, auth} = require('../../controllers')
+const {page} = require('../../controllers')
 
 router.get('/', page.index)
 

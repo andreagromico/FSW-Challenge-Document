@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/game.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.js"></script> 
+    <script src="assets/js/popper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> 
+    <script src="https://kit.fontawesome.com/484cc8aa05.js" crossorigin="anonymous"></script>
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <div class="container-fluid">
+
+        <div class="container-header">
+            <div class="wrapper-1">
+                <div class="box-header" id="back-button">
+                <a href="/"><h2>Back</h2></a>
+                <img class="logo" src="assets/img/logo-game.png">
+                <div class="header"><h1>ROCK PAPER SCISSORS</h1></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-play">
+            <div class="wrapper wrapper-2">
+                <div class="player">
+                    <div class="box"><h2><%= userename %></h2></div>
+                    <div class="box1" id="player-batu" value="ROCK"><img class="pilihan" src="assets/img/batu.png" alt="batu"></div>
+                    <div class="box1" id="player-kertas" value="PAPER"><img class="pilihan" src="assets/img/kertas.png" alt="kertas"></div>
+                    <div class="box1" id="player-gunting" value="SCISSORS"><img class="pilihan" src="assets/img/gunting.png" alt="gunting"></div>
+                </div>
+            </div>
+            
+
+            <div class="versus">
+                <div class="box-versus" id="output-result"><br><h1 class="middle-versus">VS</h1><br></div>
+            </div>
+            
+
+            <div class="wrapper wrapper-2">
+                <div class="computer">
+                    <div class="box"><h2><% username %>></h2></div>
+                    <div class="box1" id="com-batu" value="ROCK"><img class="pilihan" src="assets/img/batu.png" alt="batu" ></div>
+                    <div class="box1" id="com-kertas" value="PAPER"><img class="pilihan" src="assets/img/kertas.png" alt="kertas" ></div>
+                    <div class="box1" id="com-gunting" value="SCISSORS"><img class="pilihan" src="assets/img/gunting.png" alt="gunting" ></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-refresh">
+            <div class="wrapper-3">
+                <div class="reloader">
+                    <div class="box1" id="reference-reload">
+                        <img class="reload-button" src="assets/img/refresh.png" alt="refresh" id="reload-player-click">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="assets/js/game.js"></script>
+
+
+</body>
+</html>
