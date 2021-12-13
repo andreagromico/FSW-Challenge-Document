@@ -1,23 +1,21 @@
-const express = require('express')
-const router = express.Router()
+const router = require('express').Router()
+const router = require('./api/router')
+const { page, auth } = require('./controllers')
 
-router.use(express.static('public'));
-router.get('/', (req,res) =>{
-    res.render('index')
-});
+router.get('/', page.index);
+router.post('/article', users.create)
+router.get('/article/create', users.vCreate)
+router.get('/articles', page.dashboard)
+router.get("/edit/:id", page.edit);
+router.post("/update/:id", page.edit);
+router.get('/delete/:id', page.edit)
 
-router.get('/game', (req,res) =>{
-    res.render('game')
-});
+router.get('/register', page.vRegister)
+router.post('/register', auth.register)
+router.get('/login', page.vLogin)
+router.post('/login', auth.login)
 
-router.get('/login', (req, res) => {
-    res.render('login')
-})
-
-// router.get('/dashboard', (req,res) =>{
-//     res.render('dashboard')
-// });
-
+router.get('/game', page.game)
 
 
 

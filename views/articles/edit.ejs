@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <%- include("partials/head"); %>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="login">
+            <div class="form-outline mb-4">
+                Username : <%= user.username %>
+            </div>
+
+            <div class="form-outline mb-4">
+                Password : <%= user.password %>                
+            </div>
+
+            <div class="form-outline mb-4">
+                Role : <%= user.role %>                
+            </div>
+            <br>     
+            
+            
+
+
+            <form method="POST" action="/update/<%= user.id %>" >
+                <div class="form-outline mb-4">
+                    <input name="username" type="text" id="form3Example4" class="form-control form-control-sm"
+                  placeholder="Input New Username" />
+                </div>
+    
+                <div class="form-outline mb-4">
+                    <input name="password" type="text" id="form3Example4" class="form-control form-control-sm"
+                    placeholder="Input New Password" />              
+                </div>
+    
+                <div class="form-outline mb-4">
+                    <input name="role" type="text" id="form3Example4" class="form-control form-control-sm"
+                    placeholder="Input New Role" />              
+                </div>
+                
+                
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-warning">Edit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>   
+</body>
+</html>
